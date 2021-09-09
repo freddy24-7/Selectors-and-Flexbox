@@ -3,3 +3,91 @@
 ========================================================= */
 
 /* Schrijf hier  jouw CSS! */
+/*Below code shifts the content of a flex-box vertically to the end of the flexbox*/
+.one {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+/*Below code maximises space between elements within a flexbox*/
+.two {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/*Below code does the same but with alignment to the center of each element*/
+/*Style type modified for the unordered list, and padding added around each list item*/
+.three {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.three ul {
+    list-style-type: none;
+    display: flex;
+}
+
+.three ul li {
+    padding: 20px;
+}
+
+/*The first class-item (.four) below centers the parent element*/
+/*The second class-item below (.fourtwo) centers the child element horizontally and vertically*/
+.four {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.fourtwo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*The parent item below (.five) defines the full screen parent container*/
+/*The three child items splits screen evenly into 400px each*/
+/*Thereafter @media is used to specify events when screen-size is being reduced,*/
+/*    using flex-grow to determine the relative sizes of the elements*/
+.five {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.sixone {
+    flex-basis: 400px;
+}
+
+.sixtwo {
+    flex-basis: 400px;
+}
+
+.sixthree {
+    flex-basis: 400px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .five {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .sixone {
+        flex-grow: 1;
+    }
+
+    .sixtwo {
+        flex-grow: 1;
+    }
+
+    .sixthree {
+        flex-grow: 2;
+    }
+}
